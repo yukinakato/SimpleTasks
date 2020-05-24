@@ -89,6 +89,7 @@ header .fas {
   cursor: pointer;
   display: block;
   float: right;
+  padding: 0px;
 }
 
 .label_btn.prio_high {
