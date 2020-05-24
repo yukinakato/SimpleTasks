@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/layout.css" />
+    <title>Simple Tasks</title>
+  </head>
+  <body>
+    <header>
+      <a href="/" class="title">Simple Tasks</a>
+    </header>
+    <div class="newtask_container">
+      <div class="newtask_title">
+        <div class="new_task_title_inside">
+          <p>新規作成</p>
+        </div>
+      </div>
+      <form action="/create?p=<%= priority %>" method="post">
+        <textarea class="task_input_area" name="input_task" required></textarea>
+        <div class="btn_container">
+          <a href="/" class="task_edit_cancel_btn">キャンセル</a>
+          <input class="task_edit_submit_btn" type="submit" value="登録">
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,207 @@
+:root {
+  --color_prio_high: rgba(255, 123, 233, 1);
+  --color_prio_mid: rgba(255, 185, 92, 1);
+  --color_prio_low: rgba(163, 226, 133, 1);
+  --color_prio_memo: rgb(170, 170, 170);
+  --color_prio_high_bg: rgba(255, 123, 233, 0.2);
+  --color_prio_mid_bg: rgba(255, 185, 92, 0.2);
+  --color_prio_low_bg: rgba(163, 226, 133, 0.2);
+  --color_theme: #00e1ed;
+  --color_delete_btn: #ff7070;
+}
+
+/* *{border: 1px solid #000} */
+
+* {
+  margin: 0;
+}
+
+header {
+  background-color: var(--color_theme);
+  height: 50px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+header a.title {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 50px;
+  padding-left: 20px;
+  margin-top: 0;
+  text-decoration: none;
+}
+header .fas {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 50px;
+  padding-right: 20px;
+  margin-top: 0;
+  text-decoration: none;
+  float: right;
+}
+  
+
+.main_container {
+  width: 95%;
+  /* height: 800px; */
+  margin: 0 auto;
+}
+
+.prio_container {
+  width: 25%;
+
+  float: left;
+}
+
+.prio_inside {
+  margin: 0 auto;
+  width: 85%;
+  text-align: left;
+}
+
+.label_btn {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  padding-bottom: 5px;
+  width: 100%;
+
+  display: inline-block;
+}
+.prio_label {
+  float: left;
+}
+
+.add_btn {
+  float: right;
+  text-decoration: none;
+  color:black;
+}
+.fas.fas_save_btn {
+  color: black;
+  background-color: #fff;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  display: block;
+  float: right;
+}
+
+.label_btn.prio_high {
+  border-bottom: 2px solid var(--color_prio_high);
+}
+
+.label_btn.prio_mid {
+  border-bottom: 2px solid var(--color_prio_mid);
+}
+
+.label_btn.prio_low {
+  border-bottom: 2px solid var(--color_prio_low);
+}
+.label_btn.prio_memo {
+  border-bottom: 2px solid var(--color_prio_memo);
+}
+
+
+.free_memo_area {
+  font-size: 18px;
+  width: 100%;
+  height: 400px;
+  box-sizing: border-box;
+}
+
+.label_btn_inside {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.task_item {
+  display: block;
+  height: 60px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  word-wrap: break-word;
+  overflow: hidden;
+  padding: 8px;
+  color: black;
+}
+.task_item.prio_high {
+  border: 1px solid var(--color_prio_high);
+  border-top: 4px solid var(--color_prio_high);
+  background-color: var(--color_prio_high_bg);
+}
+.task_item.prio_mid {
+  border: 1px solid var(--color_prio_mid);
+  border-top: 4px solid var(--color_prio_mid);
+  background-color: var(--color_prio_mid_bg);
+}
+.task_item.prio_low {
+  border: 1px solid var(--color_prio_low);
+  border-top: 4px solid var(--color_prio_low);
+  background-color: var(--color_prio_low_bg);
+}
+
+.newtask_container {
+  max-width: 600px;
+  width: 90%;
+  margin: 40px auto;
+}
+
+.newtask_title {
+  border-bottom: 2px solid black;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.new_task_title_inside p {
+  padding-left: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.task_input_area {
+  font-size: 20px;
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box;
+  display: block;
+  margin-bottom: 20px;
+}
+.btn_container {
+  display: block;
+  float: right;
+}
+.task_edit_cancel_btn {
+  text-decoration: none;
+  color: blue;
+  font-size: 14px;
+}
+.task_edit_submit_btn {
+  margin-left: 30px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--color_theme);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  vertical-align: middle;
+  line-height: 100%;
+  cursor: pointer;
+}
+.task_edit_delete_btn {
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--color_delete_btn);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  vertical-align: middle;
+  line-height: 100%;
+  cursor: pointer;
+}

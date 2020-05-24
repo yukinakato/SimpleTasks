@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/layout.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
+  <title>Simple Tasks</title>
+</head>
+
+<body>
+  <header>
+    <a href="/" class="title">Simple Tasks</a>
+    <a href="/reset" class="fas fa-undo-alt wt"> リセット</a>
+    <!-- <a href="/reset" class="fas fa-undo-alt wot"></a> -->
+  </header>
+  <div class="main_container">
+    <div class="prio_container">
+      <div class="prio_inside">
+        <div class="label_btn prio_high">
+          <div class="label_btn_inside">
+            <p class="prio_label">優先度 - 高</p>
+            <a href="/new?p=3" class="add_btn"><i class="fas fa-plus"></i></a>
+          </div>
+        </div>
+        <div class="task_area">
+          <% tasks.forEach((task) => { %> <% if(task.priority === 3) { %>
+          <a href="<%= task.id %>/edit" class="task_item prio_high">
+            <%= task.name %>
+          </a>
+          <% } %> <% }); %>
+        </div>
+      </div>
+    </div>
+
+    <div class="prio_container">
+      <div class="prio_inside">
+        <div class="label_btn prio_mid">
+          <div class="label_btn_inside">
+            <p class="prio_label">優先度 - 中</p>
+            <a href="/new?p=2" class="add_btn"><i class="fas fa-plus"></i></a>
+          </div>
+        </div>
+        <div class="task_area">
+          <% tasks.forEach((task) => { %> <% if(task.priority === 2) { %>
+          <a href="<%= task.id %>/edit" class="task_item prio_mid">
+            <%= task.name %>
+          </a>
+          <% } %> <% }); %>
+        </div>
+      </div>
+    </div>
+
+    <div class="prio_container">
+      <div class="prio_inside">
+        <div class="label_btn prio_low">
+          <div class="label_btn_inside">
+            <p class="prio_label">優先度 - 低</p>
+            <a href="/new?p=1" class="add_btn"><i class="fas fa-plus"></i></a>
+          </div>
+        </div>
+        <div class="task_area">
+          <% tasks.forEach((task) => { %> <% if(task.priority === 1) { %>
+          <a href="<%= task.id %>/edit" class="task_item prio_low">
+            <%= task.name %>
+          </a>
+          <% } %> <% }); %>
+        </div>
+      </div>
+    </div>
+
+    <div class="prio_container">
+      <div class="prio_inside">
+        <% tasks.forEach((task) => { %> <% if(task.priority === 0) { %>
+        <form action="/<%= task.id %>/update" method="post">
+          <div class="label_btn prio_memo">
+            <div class="label_btn_inside">
+              <p class="prio_label">フリーメモ</p>
+              <input type="submit" value="&#xf0c7" class="fas fas_save_btn" />
+            </div>
+          </div>
+          <div class="task_area">
+            <textarea class="free_memo_area" name="input_task"><%= task.name %></textarea>
+            <% } %> <% }); %>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
