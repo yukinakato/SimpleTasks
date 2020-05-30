@@ -23,7 +23,7 @@ Dockerfile をビルドし、起動する。なおポート 3000 番で待ち受
 docker build -t simpletasks .
 docker run -d -p 3000:3000 --network my-network simpletasks
 ```
-<br><br>
+<br>
 ## コメント
 初めての Web アプリ制作で、CSS もゼロから作成したり、環境構築に Docker を取り入れたりと、多くのことを学んだ。
 一方で、メインのコードはエラー処理がほぼなされておらず、今後は品質の向上を意識したコーディングの必要性を感じた。
